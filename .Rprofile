@@ -7,8 +7,8 @@ Sys.setenv(
     RENV_PATHS_LOCKFILE = file.path("utils/proj_settings/renv.lock"),
 
     # Ensure renv uses local library instead of cache
-    Sys.setenv(RENV_PATHS_CACHE = NA),
-    Sys.setenv(RENV_PATHS_LIBRARY = "utils/renv/library")
+    RENV_PATHS_CACHE = NA,
+    RENV_PATHS_LIBRARY = file.path("utils/renv/library")
 )
 source("utils/renv/activate.R")
 
