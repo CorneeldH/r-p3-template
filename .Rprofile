@@ -1,9 +1,14 @@
 # Renv settings
 Sys.setenv(
-    RENV_CONFIG_STARTUP_QUIET = TRUE,
+    # To not distract beginner users
+    RENV_CONFIG_STARTUP_QUIET = TRUE, 
     RENV_CONFIG_SYNCHRONIZED_CHECK = FALSE,
-    RENV_PATHS_RENV = file.path("utils/renv"),
-    RENV_PATHS_LOCKFILE = file.path("utils/proj_settings/renv.lock")
+    RENV_PATHS_RENV = file.path("utils/renv"), 
+    RENV_PATHS_LOCKFILE = file.path("utils/proj_settings/renv.lock"),
+
+    # Ensure renv uses local library instead of cache
+    Sys.setenv(RENV_PATHS_CACHE = NA),
+    Sys.setenv(RENV_PATHS_LIBRARY = "utils/renv/library")
 )
 source("utils/renv/activate.R")
 
