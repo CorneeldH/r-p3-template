@@ -7,7 +7,7 @@ Sys.setenv(
 
     # Performance
     RENV_CONFIG_PAK_ENABLED = TRUE,
-    RENV_CONFIG_INSTALL_JOBS = 4,
+    # RENV_CONFIG_INSTALL_JOBS = 4, # Pak does parallelization by default, so not needed
 
     # Specfic settings, renv is within setup scrpts checked and synchronized if needed
     RENV_CONFIG_SYNCHRONIZED_CHECK = FALSE,
